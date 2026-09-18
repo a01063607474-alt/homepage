@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지를 찾을 수 없습니다 | 시내모바일</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8f9fa;
+            font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+            color: #333;
+            padding: 24px;
+        }
+        .box {
+            width: 100%;
+            max-width: 520px;
+            background: #fff;
+            border: 3px solid #ffd700;
+            border-radius: 16px;
+            padding: 48px 28px;
+            text-align: center;
+        }
+        .box img { width: 150px; height: auto; margin-bottom: 26px; }
+        .code { font-size: 46px; font-weight: 800; margin: 0 0 10px; }
+        h1 { font-size: 21px; font-weight: 800; margin: 0 0 12px; }
+        p { font-size: 16px; line-height: 1.7; color: #666; margin: 0 0 28px; }
+        .btns { display: flex; flex-direction: column; gap: 10px; }
+        a.btn {
+            display: block; padding: 16px; border-radius: 12px;
+            text-decoration: none; font-size: 16.5px; font-weight: 800; color: #333;
+        }
+        .btn--home  { background-color: #ffd700; }
+        .btn--kakao { background-color: #fee500; }
+        .btn--call  { background-color: #f1f3f5; }
+        @media (max-width: 768px) {
+            .box { padding: 36px 20px; }
+            .code { font-size: 38px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="/logo.png" alt="시내모바일 로고">
+        <p class="code">404</p>
+        <h1>페이지를 찾을 수 없습니다</h1>
+        <p>주소가 바뀌었거나 없는 페이지입니다.<br>아래에서 필요한 곳으로 이동해 주세요.</p>
+        <div class="btns">
+            <a class="btn btn--home" href="/">시내모바일 홈으로</a>
+            <a class="btn btn--kakao" href="https://open.kakao.com/o/sNyM4Ahf" target="_blank" rel="noopener noreferrer">카카오톡으로 문의하기</a>
+            <a class="btn btn--call" href="tel:0507-1448-3488">전화 상담 0507-1448-3488</a>
+        </div>
+    </div>
+</body>
+</html>
