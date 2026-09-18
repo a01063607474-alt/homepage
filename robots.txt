@@ -1,74 +1,87 @@
-# As a condition of accessing this website, you agree to abide by the following
-# content signals:
+# 시내모바일 공신폰 — www.시내모바일.com
+# 2026-09-18 정리 (대행사 Cloudflare 가 넣어둔 내용을 걷어내고 새로 씀)
+#
+# ■ 무엇을 바꿨나
+#   1. "User-agent: *" 블록이 두 번 있었습니다 → 하나로 합쳤습니다.
+#      중복되면 검색봇마다 해석이 달라져서 위험합니다.
+#   2. Cloudflare 전용 Content-Signal 줄을 뺐습니다. 지금은 GitHub Pages 라 의미가 없습니다.
+#   3. AI 검색봇(구글 AI개요·ChatGPT·Claude·퍼플렉시티) 차단을 풀었습니다.
+#      대행사가 Cloudflare 기본값으로 막아뒀는데, 우리 매장엔 손해입니다.
+#      요즘 부모님들이 AI 에게 "공신폰 뭐가 좋아?" 하고 물어봅니다.
+#   4. 네이버 Yeti 를 명시해서 허용했습니다.
 
-# (a)  If a Content-Signal = yes, you may collect content for the corresponding
-#      use.
-# (b)  If a Content-Signal = no, you may not collect content for the
-#      corresponding use.
-# (c)  If the website operator does not include a Content-Signal for a
-#      corresponding use, the website operator neither grants nor restricts
-#      permission via Content-Signal with respect to the corresponding use.
 
-# The content signals and their meanings are:
-
-# search:   building a search index and providing search results (e.g., returning
-#           hyperlinks and short excerpts from your website's contents). Search does not
-#           include providing AI-generated search summaries.
-# ai-input: inputting content into one or more AI models (e.g., retrieval
-#           augmented generation, grounding, or other real-time taking of content for
-#           generative AI search answers).
-# ai-train: training or fine-tuning AI models.
-# use:      how AI systems may consume the content (immediate, reference, or full).
-
-# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF
-# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT
-# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.
-
-# BEGIN Cloudflare Managed content
-
+# ── 모든 검색엔진 : 전부 허용 ──────────────
 User-agent: *
-Content-Signal: search=yes,ai-train=no,use=reference
 Allow: /
 
-User-agent: Amazonbot
-Disallow: /
 
-User-agent: Applebot-Extended
+# ── 네이버 ────────────────────────────────
+User-agent: Yeti
+Allow: /
+
+
+# ── 구글 · 빙 · 다음 ──────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: Daum
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+
+# ── AI 검색 : 허용 (여기에 노출돼야 유리합니다) ──
+# Google-Extended  = 구글 검색 상단의 AI 개요
+# GPTBot / OAI-SearchBot = ChatGPT 검색
+# ClaudeBot / Claude-SearchBot = Claude 검색
+# PerplexityBot    = 퍼플렉시티 검색
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+
+# ── 학습용 수집만 하고 검색 노출은 안 해주는 봇 : 차단 ──
+# 가져가기만 하고 손님을 보내주지 않아서 막아 둡니다.
+User-agent: CCBot
 Disallow: /
 
 User-agent: Bytespider
 Disallow: /
 
-User-agent: CCBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: CloudflareBrowserRenderingCrawler
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: GPTBot
+User-agent: Amazonbot
 Disallow: /
 
 User-agent: meta-externalagent
 Disallow: /
 
-# END Cloudflare Managed Content
 
-User-agent: *
-Allow: /
-
-# 사이트맵 위치
+# ── 사이트맵 ──────────────────────────────
 Sitemap: https://xn--220bu2qh5al4oi8f.com/sitemap.xml
-
-# 크롤링 제외할 디렉토리 (필요시)
-# Disallow: /admin/
-# Disallow: /private/
-
-# 크롤링 속도 제한 (선택사항)
-# Crawl-delay: 1
-
