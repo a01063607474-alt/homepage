@@ -136,6 +136,7 @@ b,strong{font-weight:800}
 #browser{background:var(--mint-l)}
 #parent{background:var(--yellow-l)}
 #store{background:var(--blue-l)}
+.sec-store{background:var(--blue-l)}
 .sec-dark{background:var(--navy);color:#fff}
 
 /* 섹션 이름표 — 살짝 기울인 스티커 느낌 */
@@ -215,8 +216,14 @@ h3.sub{
 
 /* ── 카드 ─────────────────────────── */
 .cards{display:grid;gap:16px}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
 .cards.c3{grid-template-columns:repeat(3,1fr)}
 .cards.c4{grid-template-columns:repeat(4,1fr)}
+
+/* 카드 전체가 링크인 경우 (검색어별 페이지 안내 카드) */
+a.card{text-decoration:none;color:inherit;display:block}
+a.card h4{color:var(--blue-d)}
+a.card::after{content:" →";display:block;margin-top:10px;font-size:15px;font-weight:900;color:var(--blue)}
 .card{
   background:#fff;border:3px solid var(--ink);border-radius:var(--r);
   padding:26px 22px;box-shadow:0 6px 0 var(--ink);
@@ -435,6 +442,7 @@ h3.sub{
 /* ══ 반응형 ══════════════════════════ */
 @media (max-width:1023px){
   .cards.c4{grid-template-columns:repeat(2,1fr)}
+  .cards.c3{grid-template-columns:repeat(2,1fr)}
   .vids{grid-template-columns:repeat(2,1fr)}
   .apps{grid-template-columns:repeat(2,1fr)}
   .hd-nav{display:none}
@@ -471,7 +479,7 @@ h3.sub{
   .q-ask{font-size:17px}
   .lvl-row{padding:20px 18px}
   .lvl-row p{font-size:16px}
-  .cards.c3,.cards.c4{grid-template-columns:1fr}
+  .cards.c2,.cards.c3,.cards.c4{grid-template-columns:1fr}
   .chips{grid-template-columns:1fr}
   .store-grid{grid-template-columns:1fr}
   .store-btns{flex-direction:column}
