@@ -115,8 +115,12 @@ b,strong{font-weight:800}
   box-shadow:0 5px 0 rgba(43,36,64,.2);
   display:inline-block;margin-top:.12em;
 }
-.hero-sub{font-size:clamp(16px,2.1vw,19.5px);line-height:1.8;font-weight:600;max-width:640px;margin:0 auto 38px}
-.hero-sub b{background:var(--ink);color:var(--yellow);padding:1px 8px;border-radius:7px;font-weight:900}
+.hero-sub{font-size:clamp(16px,2.1vw,19.5px);line-height:2;font-weight:600;max-width:640px;margin:0 auto 38px}
+.hero-sub b{
+  background:var(--ink);color:var(--yellow);
+  padding:1.5px 8px;border-radius:9px;font-weight:900;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
 
 .stats{display:flex;justify-content:center;gap:14px;margin-bottom:38px;flex-wrap:wrap}
 .stat{background:#fff;border:3px solid var(--ink);border-radius:var(--r);padding:22px 14px;min-width:150px;flex:0 1 176px;box-shadow:0 6px 0 var(--ink)}
@@ -160,15 +164,22 @@ b,strong{font-weight:800}
 }
 .sec-dark h2 b{color:var(--yellow);background:none;box-shadow:none;padding:0;border-radius:0}
 
-.lead{font-size:17.5px;line-height:1.8;color:var(--sub);max-width:770px;margin-bottom:36px;font-weight:500}
+/* 본문 줄간격을 넉넉하게 — 형광펜이 여러 줄에 걸쳐도 줄끼리 안 붙게 */
+.lead{font-size:17.5px;line-height:2;color:var(--sub);max-width:770px;margin-bottom:36px;font-weight:500}
 .lead.sm{font-size:16.5px;margin-bottom:24px}
 .sec-dark .lead{color:rgba(255,255,255,.82)}
+
+/* 형광펜 강조
+   ※ box-decoration-break:clone — 문장이 줄을 넘어가도 조각마다 둥근 모서리가 제대로 붙습니다.
+     이거 빼면 모바일에서 네모가 반쪽씩 잘려 보입니다. (2026-09-18 실제 지적) */
 .lead b{
   color:var(--ink);background:var(--yellow);
-  padding:2px 9px;border-radius:10px;font-weight:900;
-  box-shadow:0 2px 0 rgba(43,36,64,.2);
+  padding:1.5px 8px;border-radius:9px;font-weight:900;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
 }
-.sec-dark .lead b{background:var(--yellow);color:var(--ink);box-shadow:0 2px 0 rgba(0,0,0,.35)}
+.sec-dark .lead b{background:var(--yellow);color:var(--ink)}
+/* 짧은 마무리 문구는 줄 넘김 금지 — 쪼개지면 힘이 빠집니다 */
+.lead b.nb{white-space:nowrap}
 
 h3.sub{
   display:inline-block;font-size:22px;font-weight:900;color:var(--ink);
@@ -385,7 +396,8 @@ h3.sub{
 .fq.on .fq-a{grid-template-rows:1fr}
 .fq-a > p{overflow:hidden;margin:0;padding:0 24px;font-size:16.5px;line-height:1.78;color:var(--sub);font-weight:500;transition:padding .24s ease}
 .fq.on .fq-a > p{padding:16px 24px 24px}
-.fq-a b{color:var(--ink);background:var(--yellow-l);padding:1px 5px;border-radius:5px}
+.fq-a b{color:var(--ink);background:var(--yellow-l);padding:1px 6px;border-radius:7px;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
 
 /* ── 매장 ─────────────────────────── */
 .store-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px}
@@ -446,7 +458,8 @@ h3.sub{
   .hero-btns .btn{width:100%}
 
   .sec{padding:52px 0}
-  .lead{margin-bottom:26px;font-size:16.5px}
+  .lead{margin-bottom:26px;font-size:16.5px;line-height:2.05}
+  .hero-sub{line-height:2.05}
   h3.sub{margin:36px 0 14px;font-size:19px;padding:6px 13px}
 
   .vs{grid-template-columns:1fr;gap:12px}
