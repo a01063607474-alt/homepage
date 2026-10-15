@@ -419,6 +419,15 @@ a.card::after{content:" →";display:block;margin-top:10px;font-size:15px;font-w
 .ft{background:var(--navy);color:rgba(255,255,255,.72);padding:52px 0 110px;text-align:center}
 .ft-logo{height:32px;width:auto;margin:0 auto 22px;filter:brightness(0) invert(1);opacity:.9}
 .ft-info p{font-size:14.5px;line-height:1.9}
+.ft-info a{color:rgba(255,255,255,.9);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.ft-info a:hover{color:var(--yellow);border-bottom-color:var(--yellow)}
+.ft-biz{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;max-width:780px;margin:22px auto 0;text-align:left}
+.ft-biz-box{flex:1 1 320px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px}
+.ft-biz-box h3{font-size:14.5px;font-weight:800;color:#fff;margin:0 0 9px;letter-spacing:0}
+.ft-biz-box h3 em{display:inline-block;font-style:normal;font-size:11.5px;font-weight:800;color:var(--navy);background:var(--yellow);border-radius:999px;padding:3px 9px;margin-left:6px;vertical-align:1px}
+.ft-biz-box p{font-size:13.5px;line-height:1.75;margin:0 0 3px}
+.ft-biz-box b{color:rgba(255,255,255,.92);font-weight:700}
+.ft-biz-sub{font-size:12.5px;color:rgba(255,255,255,.45)}
 .ft-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}
 .ft-links a{border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:800;text-decoration:none;color:#fff}
 .ft-links a:hover{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
