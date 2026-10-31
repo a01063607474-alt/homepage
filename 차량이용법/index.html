@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>차량 이용법 | 잠실리센츠상가 주차장 · 지하1층 시내모바일 오시는 길</title>
+<meta name="description" content="내비 목적지는 「잠실리센츠상가 주차장」. T맵·네이버지도·카카오맵 버튼 한 번으로 길안내가 시작돼요. 지하 2층 상가 주차장 → 34번 옆 엘리베이터 → 지하 1층 직진.">
+<meta name="keywords" content="잠실리센츠상가 주차장, 리센츠 상가 주차장, 시내모바일 오시는 길, 잠실 공신폰 매장 주차, 올림픽로 145 주차장, 리센츠 지하주차장">
+<meta name="author" content="시내모바일">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://xn--220bu2qh5al4oi8f.com/%EC%B0%A8%EB%9F%89%EC%9D%B4%EC%9A%A9%EB%B2%95/">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://xn--220bu2qh5al4oi8f.com/%EC%B0%A8%EB%9F%89%EC%9D%B4%EC%9A%A9%EB%B2%95/">
+<meta property="og:title" content="🚗 차량 이용법 | 시내모바일 오시는 길">
+<meta property="og:description" content="내비 목적지는 「잠실리센츠상가 주차장」이에요. 버튼 한 번이면 길안내가 시작돼요. 지하 2층 → 34번 옆 엘리베이터 → 지하 1층 직진.">
+<meta property="og:image" content="https://xn--220bu2qh5al4oi8f.com/logo.png">
+<meta property="og:site_name" content="시내모바일">
+<meta property="og:locale" content="ko_KR">
+<meta name="theme-color" content="#FFD028">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org", "@type": "Store",
+  "@id": "https://xn--220bu2qh5al4oi8f.com/#store",
+  "name": "시내모바일",
+  "alternateName": "AM휴대폰성지 잠실리센츠 시내모바일 1호점",
+  "description": "잠실 리센츠 상가동 지하1층 공신폰 전문 판매·세팅점.",
+  "url": "https://xn--220bu2qh5al4oi8f.com",
+  "logo": "https://xn--220bu2qh5al4oi8f.com/logo.png",
+  "image": "https://xn--220bu2qh5al4oi8f.com/logo.png",
+  "telephone": "0507-1448-3488",
+  "address": { "@type": "PostalAddress", "streetAddress": "올림픽로 145, 리센츠 상가동 지하1층 에이97호",
+    "addressLocality": "송파구", "addressRegion": "서울특별시", "postalCode": "05504", "addressCountry": "KR" },
+  "geo": { "@type": "GeoCoordinates", "latitude": "37.5119636", "longitude": "127.0870103" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "12:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday", "opens": "12:00", "closes": "19:30" }
+  ],
+  "hasMap": "https://map.naver.com/p/entry/place/1630514990"
+}
+</script>
+
+<link rel="stylesheet" href="../styles.css?v=20261015">
+
+<style>
+/* ── 차량 이용법 전용 (2026-10-30) ─────────────────
+   styles.css 를 건드리지 않으려고 이 페이지 안에만 둡니다.
+   (건드리면 하위 페이지 15개의 ?v= 를 다 올려야 합니다) */
+
+/* 목적지 카드 */
+.dest{
+  background:#fff;border:3px solid var(--ink);border-radius:var(--r);
+  box-shadow:0 6px 0 var(--ink);padding:26px 24px;margin-bottom:26px;text-align:center;
+}
+.dest-label{
+  display:inline-block;background:var(--mint-l);color:var(--mint-d);
+  font-size:13.5px;font-weight:900;letter-spacing:-.02em;
+  padding:5px 14px;border-radius:999px;margin-bottom:14px;
+}
+.dest-name{font-size:clamp(23px,5.6vw,31px);font-weight:900;letter-spacing:-.045em;line-height:1.3}
+.dest-name b{color:var(--blue-d)}
+.dest-hint{
+  font-size:14.5px;font-weight:800;color:var(--blue-d);
+  margin-top:6px;letter-spacing:-.03em;
+}
+.dest-addr{font-size:16px;font-weight:600;color:var(--sub);margin-top:8px;letter-spacing:-.03em}
+.dest-copy{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.copy-btn{
+  background:var(--cream);border:2.5px solid var(--ink);border-radius:999px;
+  box-shadow:0 3px 0 var(--ink);cursor:pointer;
+  font-family:inherit;font-size:14.5px;font-weight:800;color:var(--ink);
+  padding:11px 18px;letter-spacing:-.03em;
+}
+.copy-btn:active{transform:translateY(3px);box-shadow:0 0 0 var(--ink)}
+.copy-btn.done{background:var(--mint);border-color:var(--mint-d);box-shadow:0 3px 0 var(--mint-d);color:#fff}
+
+/* 내비 버튼 3개 */
+.navi{display:grid;gap:13px;margin-bottom:18px}
+.navi a{
+  display:flex;align-items:center;gap:15px;text-decoration:none;
+  border:3px solid var(--ink);border-radius:22px;box-shadow:0 5px 0 var(--ink);
+  padding:17px 20px;background:#fff;color:var(--ink);
+}
+.navi a:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+.navi-ic{
+  flex:0 0 auto;width:48px;height:48px;border-radius:15px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:900;letter-spacing:-.05em;
+  border:2.5px solid var(--ink);
+}
+.navi-tx{flex:1 1 auto;min-width:0}
+.navi-tx b{display:block;font-size:19.5px;font-weight:900;letter-spacing:-.045em;line-height:1.25}
+.navi-tx span{display:block;font-size:14px;font-weight:600;color:var(--sub);letter-spacing:-.03em;margin-top:3px}
+.navi-go{flex:0 0 auto;font-size:22px;font-weight:900;color:var(--blue)}
+.ic-tmap{background:var(--blue);color:#fff}
+.ic-nmap{background:#03C75A;color:#fff;font-size:24px}
+.ic-kmap{background:var(--kakao);color:var(--ink);font-size:24px}
+
+.navi-tip{
+  background:var(--yellow-l);border:2.5px dashed var(--yellow-d);border-radius:var(--r-s);
+  padding:15px 18px;font-size:15px;font-weight:600;line-height:1.75;
+  color:var(--ink);letter-spacing:-.03em;
+}
+.navi-tip b{font-weight:900}
+#pcNote{display:none}
+
+/* 단계 */
+.steps{display:grid;gap:14px;margin-top:4px}
+.step{
+  display:flex;gap:16px;align-items:flex-start;
+  background:#fff;border:3px solid var(--ink);border-radius:var(--r);
+  box-shadow:var(--sh);padding:22px;
+}
+.step-no{
+  flex:0 0 auto;width:42px;height:42px;border-radius:14px;
+  background:var(--yellow);border:2.5px solid var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;font-weight:900;color:var(--ink);
+}
+.step-bd h4{font-size:19px;font-weight:900;letter-spacing:-.045em;line-height:1.35;margin-bottom:7px}
+.step-bd p{font-size:16px;font-weight:500;line-height:1.78;color:var(--sub);letter-spacing:-.03em}
+.step-bd p b{color:var(--ink);font-weight:800;background:var(--yellow-l);padding:1px 5px;border-radius:6px}
+.step.step-hi{background:var(--blue-l)}
+.step.step-hi .step-no{background:var(--blue);color:#fff}
+
+/* 영상 */
+.shorts{
+  max-width:360px;margin:0 auto;border:3px solid var(--ink);border-radius:var(--r);
+  overflow:hidden;box-shadow:0 6px 0 var(--ink);background:#000;
+}
+.shorts-in{position:relative;width:100%;aspect-ratio:9/16}
+.shorts-in iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.shorts-cap{font-size:14.5px;font-weight:600;color:var(--sub);text-align:center;margin-top:14px;letter-spacing:-.03em}
+
+/* 섹션 바탕 — 🔴 `styles.css` 에 `#store{background:var(--blue-l)}` 라는 ID 규칙이 있다.
+   ID 가 클래스를 이기므로 `sec-dark`(남색)를 붙이면 바탕만 연보라로 남고 글씨는 흰색이 돼
+   글씨가 통째로 안 보인다(2026-10-31 실제로 그랬다). 그래서 이 페이지는 id 를 `shop` 으로 두고
+   바탕을 여기서 직접 정한다. */
+#park{background:var(--mint-l)}
+#shop{background:var(--blue-l)}
+
+/* 이 페이지는 하단 고정 버튼(전화·카톡)을 안 쓴다 → 그만큼 비워 둔 여백을 되돌린다 */
+.ft{padding-bottom:52px}
+.totop{bottom:20px}
+
+@media(min-width:720px){
+  .navi{grid-template-columns:repeat(3,1fr)}
+  .navi a{flex-direction:column;text-align:center;gap:11px;padding:22px 16px}
+  .navi-go{display:none}
+}
+@media(max-width:768px){
+  .ft{padding-bottom:42px}
+  .totop{bottom:16px}
+}
+@media(max-width:520px){
+  .step{padding:19px 17px;gap:13px}
+  .dest{padding:22px 18px}
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="hd">
+  <div class="wrap hd-in">
+    <a href="../" class="hd-logo"><img src="../logo.png" alt="시내모바일"></a>
+    <nav class="hd-nav">
+      <a href="../">홈</a>
+      <a href="../잠실공신폰/">매장 안내</a>
+      <a href="../카톡공신폰/">카톡공신폰</a>
+      <a href="../중학생공신폰/">중학생</a>
+      <a href="../고등학생공신폰/">고등학생</a>
+    </nav>
+    <a href="tel:0507-1448-3488" class="hd-cta">📞 전화</a>
+    <button class="hd-burger" id="burger" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <button class="drawer-x" id="drawerX" aria-label="닫기">&times;</button>
+  <nav>
+    <a href="../">시내모바일 공신폰 홈</a>
+    <a href="../잠실공신폰/">잠실 매장 안내 · 오시는 길</a>
+    <a href="../카톡공신폰/">카톡 되는 공신폰</a>
+    <a href="../초등학생공신폰/">초등학생 공신폰</a>
+    <a href="../중학생공신폰/">중학생 공신폰</a>
+    <a href="../고등학생공신폰/">고등학생 공신폰</a>
+    <a href="../공신폰뚫는법/">공신폰 뚫는 법</a>
+  </nav>
+  <div class="drawer-btns">
+    <a href="tel:0507-1448-3488" class="btn btn-line">전화 상담</a>
+    <a href="https://open.kakao.com/o/sNyM4Ahf" target="_blank" rel="noopener noreferrer" class="btn btn-kakao">카톡 상담</a>
+  </div>
+</div>
+<div class="drawer-bg" id="drawerBg"></div>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="badge">🚗 차 타고 오시는 길</span>
+    <h1>내비에 <b>이것만</b><br>찍으시면 돼요</h1>
+    <p class="hero-sub">
+      목적지는 <b>「잠실리센츠상가 주차장」</b>이에요.<br>
+      아래에서 쓰시는 내비를 누르면 <b>길안내가 바로 시작</b>돼요.
+    </p>
+  </div>
+</section>
+
+<section class="sec" id="navi">
+  <div class="wrap wrap-n">
+    <p class="eyebrow">1단계 · 내비 목적지</p>
+    <h2>버튼 한 번이면<br><b>바로 출발</b>해요</h2>
+
+    <div class="dest">
+      <span class="dest-label">📍 내비 목적지</span>
+      <p class="dest-name">잠실리센츠상가 <b>주차장</b></p>
+      <p class="dest-hint">(내비에 이대로 검색하세요)</p>
+      <p class="dest-addr">서울 송파구 올림픽로 145 (잠실동, 리센츠)</p>
+      <div class="dest-copy">
+        <button type="button" class="copy-btn" data-copy="잠실리센츠상가 주차장">📋 목적지 이름 복사</button>
+        <button type="button" class="copy-btn" data-copy="서울 송파구 올림픽로 145">📋 주소 복사</button>
+      </div>
+    </div>
+
+    <div class="navi">
+      <a id="btnTmap" href="https://play.google.com/store/apps/details?id=com.skt.tmap.ku" rel="noopener">
+        <span class="navi-ic ic-tmap">T</span>
+        <span class="navi-tx"><b>T맵</b><span>티맵으로 주차장 도착지 자동안내</span></span>
+        <span class="navi-go">›</span>
+      </a>
+      <a id="btnNmap" href="https://map.naver.com/p/entry/place/707458453" rel="noopener">
+        <span class="navi-ic ic-nmap">N</span>
+        <span class="navi-tx"><b>네이버지도</b><span>네이버지도로 주차장 도착지 자동안내</span></span>
+        <span class="navi-go">›</span>
+      </a>
+      <a id="btnKmap" href="https://m.map.kakao.com/scheme/route?ep=37.5119421,127.0870268&amp;by=car" rel="noopener">
+        <span class="navi-ic ic-kmap">K</span>
+        <span class="navi-tx"><b>카카오맵</b><span>카카오맵으로 주차장 도착지 자동안내</span></span>
+        <span class="navi-go">›</span>
+      </a>
+    </div>
+
+    <div class="navi-tip">
+      <b>혹시 목적지가 안 잡히면요?</b><br>
+      위 <b>「목적지 이름 복사」</b>를 누르고, 쓰시는 내비 검색창에 붙여넣어 주세요.
+      차에 달린 내비(아이나비 · 현대 · 기아 등)도 <b>「잠실리센츠상가 주차장」</b>으로 검색하면 나와요.
+    </div>
+    <div class="navi-tip" id="pcNote" style="margin-top:12px">
+      💻 지금은 컴퓨터로 보고 계세요. <b>휴대폰에서 이 페이지를 열면</b> 내비 앱이 바로 켜져요.
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="park">
+  <div class="wrap wrap-n">
+    <p class="eyebrow">2단계 · 주차장에서 매장까지</p>
+    <h2>상가 주차장은<br><b>따로</b> 있어요</h2>
+    <p class="lead">
+      아파트 단지로 들어오시면 <b>상가 전용 주차장</b>이 따로 있어요.
+      처음 오시는 분들이 가장 많이 헷갈리는 부분이라, 아래 세 가지만 기억해 주세요 😊
+    </p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-no">1</span>
+        <div class="step-bd">
+          <h4>아파트 단지로 들어와서 <b>상가 전용 주차장</b>으로</h4>
+          <p>아파트 주차장과 <b>상가 전용 주차장</b>이 따로 있어요. 상가 쪽으로 들어오시면 돼요.</p>
+        </div>
+      </div>
+      <div class="step step-hi">
+        <span class="step-no">2</span>
+        <div class="step-bd">
+          <h4><b>지하 2층</b> 상가 주차장에 주차해요</h4>
+          <p>주차하신 뒤 <b>34번 옆 엘리베이터</b>를 찾아 주세요. 그 엘리베이터를 타시면 돼요.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-no">3</span>
+        <div class="step-bd">
+          <h4><b>지하 1층</b>에서 내려 직진!</h4>
+          <p>엘리베이터에서 <b>지하 1층</b>으로 내리신 다음 <b>쭉 직진</b>하시면 <b>시내모바일</b>이 보여요.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="video">
+  <div class="wrap wrap-n">
+    <p class="eyebrow">영상으로 보기</p>
+    <h2>30초 영상이<br>가장 <b>빨라요</b></h2>
+    <div class="shorts">
+      <div class="shorts-in">
+        <iframe src="https://www.youtube.com/embed/EVeSeJN6Eo8?rel=0&amp;playsinline=1"
+                title="시내모바일 차량 이용법 안내 영상"
+                loading="lazy" allowfullscreen
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+    <p class="shorts-cap">주차장에서 매장까지 가는 길을 담은 30초 영상이에요.<br>
+      안 보이시면 <a href="https://www.youtube.com/shorts/EVeSeJN6Eo8" target="_blank" rel="noopener noreferrer"><b>유튜브에서 바로 보기</b></a></p>
+  </div>
+</section>
+
+<section class="sec" id="shop">
+  <div class="wrap wrap-n">
+    <p class="eyebrow">매장 정보</p>
+    <h2>잠실 리센츠<br>상가동 <b>지하 1층</b></h2>
+    <div class="store-grid">
+      <div class="store-item"><span>주소</span><b>서울 송파구 올림픽로 145<br>리센츠 상가동 지하1층 에이97호</b><em>지하철은 잠실새내역 8번 출구 · 지하 1층 바로 코앞!!</em></div>
+      <div class="store-item"><span>영업시간</span><b>월~토 12:00 ~ 20:00<br>일요일 12:00 ~ 19:30</b><em>연중무휴</em></div>
+      <div class="store-item"><span>전화</span><b><a href="tel:0507-1448-3488">0507-1448-3488</a></b></div>
+    </div>
+    <div class="hero-btns" style="margin-top:30px">
+      <a href="tel:0507-1448-3488" class="btn btn-line btn-lg">📞 전화 0507-1448-3488</a>
+      <a href="https://map.naver.com/p/entry/place/1630514990" target="_blank" rel="noopener noreferrer" class="btn btn-kakao btn-lg">📍 네이버 플레이스 연결하기</a>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="wrap wrap-n">
+    <img src="../logo.png" alt="시내모바일" class="ft-logo">
+    <div class="ft-info">
+      <p>대표 · 개인정보보호책임자 <b>김신외</b></p>
+      <p><a href="mailto:zxcc1100@naver.com">zxcc1100@naver.com</a> &nbsp;·&nbsp; <a href="tel:0507-1448-3488">0507-1448-3488</a></p>
+    </div>
+    <div class="ft-biz">
+      <div class="ft-biz-box">
+        <h3>시내모바일 1호점 <em>매장</em></h3>
+        <p>사업자등록번호 <b>771-05-02143</b></p>
+        <p>서울특별시 송파구 올림픽로 145, 상가동 지하1층 에이97호(잠실동, 리센츠)</p>
+        <p class="ft-biz-sub">개업 2021년 07월 30일</p>
+      </div>
+      <div class="ft-biz-box">
+        <h3>시내모바일 온라인 <em>통신판매</em></h3>
+        <p>사업자등록번호 <b>273-79-00526</b></p>
+        <p>통신판매업신고 <b>제2026-서울송파-2761호</b></p>
+        <p>서울특별시 송파구 백제고분로7길 8-16, 지하1층 11호(잠실동, 남광빌딩)</p>
+      </div>
+    </div>
+    <div class="ft-links">
+      <a href="https://www.ictmarket.or.kr:8443/ajax/ajax3.do?id=PRE0000155005&amp;seq=1&amp;yn=1" target="_blank" rel="noopener noreferrer">사전승낙서 (무선)</a>
+      <a href="https://www.ictmarket.or.kr:8443/ajax/ajax3.do?id=PRE0000155231&amp;seq=1&amp;yn=1" target="_blank" rel="noopener noreferrer">사전승낙서 (유선)</a>
+    </div>
+    <div class="ft-info" style="margin-top:18px">
+      <p><a href="../이용약관/">이용약관</a> &nbsp;·&nbsp; <a href="../개인정보처리방침/">개인정보처리방침</a> &nbsp;·&nbsp; <a href="../배송교환반품/">배송 · 교환 · 반품 안내</a></p>
+    </div>
+    <img src="../associ.png" alt="한국정보통신진흥협회 인증" class="ft-cert" loading="lazy" width="150">
+    <p class="ft-copy">&copy; 2026 시내모바일. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="맨 위로">↑</button>
+
+<script src="../script.js?v=20261015"></script>
+<script>
+/* ════════════════════════════════════════════════
+   내비 앱 바로가기 — 2026-10-30
+   목적지 : 잠실리센츠상가 주차장
+            네이버 플레이스 707458453 · 37.5119421, 127.0870268 (실측 확인)
+            카카오맵에도 같은 이름으로 등록돼 있다 (실측 확인)
+
+   · 공식 문서로 확인한 것
+       네이버 : nmap://route/car · appname 필수 · package com.nhn.android.nmap
+       카카오 : kakaomap://route?ep=위도,경도&by=car · 웹 m.map.kakao.com/scheme/route
+   · T맵은 공식 스킴 문서가 없다. 커뮤니티에서 보고된 두 가지 파라미터 이름
+     (goalname/goalx/goaly · rGoName/rGoX/rGoY)을 한 URL 에 같이 넣어 둘 다 받게 했다.
+   · 앱이 없을 때 : 안드로이드는 intent 의 browser_fallback_url,
+                    아이폰은 2.2초 뒤 폴백, 컴퓨터는 웹 지도.
+   · HTML 의 href 에는 미리 「웹 주소」를 넣어 뒀다 — JS 가 안 돌아도 죽은 버튼이 되지 않는다.
+   ════════════════════════════════════════════════ */
+(function () {
+  var NAME = '잠실리센츠상가 주차장';
+  var LAT  = '37.5119421';
+  var LNG  = '127.0870268';
+  var APPNAME = 'xn--220bu2qh5al4oi8f.com';
+  var E = encodeURIComponent;
+
+  var ua    = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) ||
+              (/Macintosh/.test(ua) && 'ontouchend' in document);
+  var isAnd = /Android/i.test(ua);
+  var isMob = isIOS || isAnd;
+
+  /* 앱이 없을 때 갈 곳 */
+  var FB = {
+    tmap: isIOS ? 'https://apps.apple.com/kr/app/id431589174'
+                : 'https://play.google.com/store/apps/details?id=com.skt.tmap.ku',
+    nmap: 'https://map.naver.com/p/entry/place/707458453',
+    kmap: 'https://m.map.kakao.com/scheme/route?ep=' + LAT + ',' + LNG + '&by=car'
+  };
+
+  /* 컴퓨터에서 볼 때 */
+  var PC = {
+    tmap: 'https://play.google.com/store/apps/details?id=com.skt.tmap.ku',
+    nmap: 'https://map.naver.com/p/entry/place/707458453',
+    kmap: 'https://map.kakao.com/?q=' + E(NAME)
+  };
+
+  /* 앱 스킴 */
+  var SCHEME = {
+    tmap: 'tmap://route?goalname=' + E(NAME) + '&goalx=' + LNG + '&goaly=' + LAT +
+          '&rGoName=' + E(NAME) + '&rGoX=' + LNG + '&rGoY=' + LAT,
+    nmap: 'nmap://route/car?dlat=' + LAT + '&dlng=' + LNG + '&dname=' + E(NAME) +
+          '&appname=' + APPNAME,
+    kmap: 'kakaomap://route?ep=' + LAT + ',' + LNG + '&by=car'
+  };
+
+  /* 안드로이드는 intent URL — 앱이 없으면 브라우저가 알아서 폴백한다 */
+  function intentUrl(key, pkg) {
+    var parts = SCHEME[key].split('://');
+    return 'intent://' + parts[1] + '#Intent;scheme=' + parts[0] +
+           ';action=android.intent.action.VIEW' +
+           ';category=android.intent.category.BROWSABLE' +
+           ';package=' + pkg +
+           ';S.browser_fallback_url=' + E(FB[key]) + ';end';
+  }
+  var ANDROID = {
+    tmap: intentUrl('tmap', 'com.skt.tmap.ku'),
+    nmap: intentUrl('nmap', 'com.nhn.android.nmap'),
+    kmap: intentUrl('kmap', 'net.daum.android.map')
+  };
+
+  var BTN = { tmap: 'btnTmap', nmap: 'btnNmap', kmap: 'btnKmap' };
+
+  Object.keys(BTN).forEach(function (key) {
+    var el = document.getElementById(BTN[key]);
+    if (!el) return;
+
+    if (!isMob) { el.href = PC[key]; el.target = '_blank'; return; }
+
+    el.href = isAnd ? ANDROID[key] : SCHEME[key];
+
+    /* 아이폰 : 앱이 없으면 아무 일도 안 일어난다 → 2.2초 뒤 폴백 */
+    if (isIOS) {
+      el.addEventListener('click', function () {
+        var done = false;
+        function cancel() { done = true; }
+        document.addEventListener('visibilitychange', cancel, { once: true });
+        window.addEventListener('pagehide', cancel, { once: true });
+        setTimeout(function () {
+          if (!done && !document.hidden) location.href = FB[key];
+        }, 2200);
+      });
+    }
+  });
+
+  if (!isMob) {
+    var note = document.getElementById('pcNote');
+    if (note) note.style.display = 'block';
+  }
+
+  /* 복사 버튼 */
+  document.querySelectorAll('.copy-btn').forEach(function (btn) {
+    var original = btn.textContent;
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy') || '';
+      function ok() {
+        btn.textContent = '✅ 복사했어요!';
+        btn.classList.add('done');
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove('done');
+        }, 1800);
+      }
+      function legacy() {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        ta.setSelectionRange(0, text.length);
+        var good = false;
+        try { good = document.execCommand('copy'); } catch (e) { good = false; }
+        document.body.removeChild(ta);
+        if (good) ok();
+        else {
+          btn.textContent = '길게 눌러 복사해 주세요';
+          setTimeout(function () { btn.textContent = original; }, 2600);
+        }
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(ok).catch(legacy);
+      } else {
+        legacy();
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
