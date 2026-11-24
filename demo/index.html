@@ -268,6 +268,51 @@ a{color:inherit}
 .fi.seen{background:var(--greenS)} .fi.seen .g{background:var(--green);color:#fff}
 #alarm{position:absolute;left:10px;right:10px;top:10px;z-index:99;background:#D93025;color:#fff;border-radius:14px;padding:10px 14px;font-size:14px;font-weight:700;display:none}
 #alarm.on{display:block}
+/* ── 2026-11-24 2차 : 나이 드신 부모님도 쉽게 ── */
+#sIntro h1{font-size:33px} .lead{font-size:17px}
+.howT{margin-top:22px;font-size:18px;font-weight:800}
+.how2{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+.how2 div{display:flex;gap:12px;align-items:center;background:var(--card);border-radius:16px;padding:12px 14px;font-size:17px;line-height:1.45;box-shadow:0 0 0 1.5px var(--line) inset}
+.how2 i{font-style:normal;flex:none;width:30px;height:30px;border-radius:15px;background:var(--blue);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.h2{font-size:26px} .h2sub{font-size:16.5px}
+.tile{font-size:17px;min-height:78px}
+#cdTitle{font-size:15.5px}
+#cdRow{display:flex;gap:6px;margin-top:6px;align-items:stretch}
+#cdStep{flex:1;margin-top:0;font-size:17px;line-height:1.4;font-weight:700;border-radius:12px;padding:8px 10px;background:var(--blueS);color:var(--ink)}
+#cdStep b{color:var(--blue2)}
+#cdStep .n{display:inline-flex;width:22px;height:22px;border-radius:11px;background:var(--blue);color:#fff;font-size:13px;align-items:center;justify-content:center;margin-right:6px;vertical-align:2px}
+#cdStep.ok{background:var(--greenS);color:#0E6B47;font-size:18px}
+#cdHelp{flex:none;width:64px;border-radius:12px;background:var(--warm);color:#4A2E00;font-size:13px;font-weight:800;line-height:1.2;padding:4px 2px}
+#cdNote{font-size:15px;color:var(--ink);font-weight:700;background:var(--warmS);border-radius:10px;padding:6px 9px}
+#cdExtra .btn{font-size:15.5px;height:42px}
+#dNext{padding:0 16px}
+.tab{font-size:14.5px}
+#flash{top:70%;bottom:auto;transform:translate(-50%,-50%) scale(.9);font-size:21px;font-weight:600;border-radius:22px;padding:18px 26px;text-align:center;line-height:1.4;white-space:nowrap;background:rgba(31,42,55,.94)}
+#flash b{font-weight:800;color:#FFD66B}
+#flash.on{transform:translate(-50%,-50%)}
+#finger{position:absolute;z-index:45;font-size:42px;line-height:1;pointer-events:none;display:none;margin-left:-14px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.4));animation:tap 1s ease-in-out infinite}
+#finger.on{display:block}
+@keyframes tap{0%,100%{transform:translateY(8px)}50%{transform:translateY(-2px)}}
+.kitSpot{animation:kitp 1.1s infinite!important}
+@keyframes kitp{50%{box-shadow:0 0 0 6px rgba(61,107,240,.4)}}
+#ovl{position:absolute;left:0;right:0;top:48px;bottom:0;z-index:50;background:rgba(251,246,238,.98);display:none;overflow-y:auto;padding:12px 16px calc(16px + env(safe-area-inset-bottom))}
+#ovl.on{display:block;animation:fade .25s}
+.ovE{font-size:50px;text-align:center}
+.ovT{font-size:24px;font-weight:800;text-align:center;letter-spacing:-.5px;line-height:1.35;margin:4px 0 14px}
+.ovQ,.ovA{display:flex;gap:10px;align-items:flex-start;border-radius:18px;padding:14px;font-size:18px;line-height:1.55;margin-bottom:10px}
+.ovQ small,.ovA small{display:block;font-size:13.5px;font-weight:800;opacity:.75;margin-bottom:2px}
+.ovQ{background:#FFF0EA;color:#6E2F18} .ovA{background:var(--greenS);color:#0B4F35}
+.ovQ>span,.ovA>span{font-size:28px;flex:none;line-height:1.1}
+.ovHow{background:var(--blueS);color:#22408F;border-radius:16px;padding:12px 14px;font-size:16.5px;line-height:1.55;margin-bottom:12px}
+.btn.big{height:62px;font-size:20px;margin-top:4px}
+.ovL{margin:0 0 12px;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.ovL li{background:var(--card);border-radius:16px;padding:13px 14px 13px 46px;font-size:18px;line-height:1.5;box-shadow:0 0 0 1.5px var(--line) inset;position:relative}
+.ovL li small{font-size:14.5px;color:var(--sub)}
+.ovL li::before{content:'✓';position:absolute;left:13px;top:15px;width:24px;height:24px;border-radius:12px;background:var(--green);color:#fff;font-size:14px;text-align:center;line-height:24px}
+.ovTip{background:var(--warmS);color:#6B4A12;border-radius:14px;padding:12px 14px;font-size:16px;line-height:1.55;margin-bottom:10px}
+#ovl .row2{margin-top:10px}
+#app{word-break:keep-all;overflow-wrap:anywhere}
+.ovE{font-size:44px}
 </style>
 </head>
 <body>
@@ -285,11 +330,13 @@ a{color:inherit}
         <div class="duoBox no"><div class="h"><i>✕</i>이런 길은 막아요</div>
           <div class="noList"><span>카톡 속 링크</span><span>앱 속 인터넷</span><span>유튜브·쇼츠</span><span>설정에서 풀기</span></div></div>
       </div>
-      <div class="how">
-        <div><span>👧</span><span><b>아이 폰</b>과 <b>👩 부모님 폰</b>을 번갈아 직접 눌러 봐요</span></div>
-        <div><span>✅</span><span>부모님 화면은 <b>실제 관리 화면 그대로</b>예요</span></div>
-        <div><span>🙂</span><span>진짜 폰과는 연결돼 있지 않아요. 마음껏 눌러 보세요</span></div>
+      <div class="howT">이렇게 보시면 돼요 🙂</div>
+      <div class="how2">
+        <div><i>1</i><span>걱정되는 것을 <b>골라요</b></span></div>
+        <div><i>2</i><span><b>👆 손가락</b>이 가리키는 곳을 <b>눌러요</b></span></div>
+        <div><i>3</i><span>모르겠으면 <b>「🤝 보여 주세요」</b>를 눌러요. 대신 해 드려요</span></div>
       </div>
+      <div class="small" style="margin-top:12px;font-size:14px">👧 아이 폰과 👩 엄마·아빠 폰 화면을 번갈아 보여 드려요.<br>엄마·아빠 폰 화면은 <b>실제 관리 화면 그대로</b>예요.<br>진짜 아이 폰과는 연결돼 있지 않으니 마음껏 눌러 보세요.</div>
     </div>
     <div class="foot">
       <button class="btn pri" id="goStart">👆 체험 시작하기</button>
@@ -301,7 +348,7 @@ a{color:inherit}
   <section class="scr" id="sWorry">
     <div class="scroll">
       <div class="h2">무엇이 가장 걱정되세요? 🤔</div>
-      <div class="h2sub">골라 주시면 딱 맞는 것부터 보여 드릴게요.<br>여러 개 골라도 돼요.</div>
+      <div class="h2sub">눌러서 골라 주세요. <b>여러 개</b> 골라도 돼요.<br>고르신 것부터 보여 드릴게요.</div>
       <div class="tiles" id="wTiles"></div>
     </div>
     <div class="foot">
@@ -319,11 +366,10 @@ a{color:inherit}
       <a class="ib kakao" href="https://open.kakao.com/o/sNyM4Ahf" target="_blank" rel="noopener noreferrer">💬 상담</a>
     </div>
     <div id="card">
-      <div id="cdTop"><span id="cdEmoji"></span><span id="cdTitle"></span><span id="cdDots"></span><button id="cdMoreBtn">도움말 ▾</button></div>
-      <div id="cdStep"></div>
+      <div id="cdTop"><span id="cdEmoji"></span><span id="cdTitle"></span><span id="cdDots"></span></div>
+      <div id="cdRow"><div id="cdStep"></div><button id="cdHelp">🤝<br>보여<br>주세요</button></div>
       <div id="cdNote"></div>
       <div id="cdExtra"></div>
-      <div id="cdMore"><div id="cdSteps"></div><div id="cdTip"></div></div>
     </div>
     <div id="stage">
       <div class="pane" id="paneC"><div id="child">
@@ -376,11 +422,11 @@ a{color:inherit}
       </div></div>
       <div id="flash"></div>
     </div>
+    <div id="ovl"><div id="ovBox"></div></div>
     <div id="dBot">
-      <button class="btn" id="dPrev" aria-label="이전">◀</button>
       <div id="tabs">
         <button class="tab" data-t="child">👧 아이 폰<span class="dot"></span></button>
-        <button class="tab" data-t="parent">👩 부모님 폰<span class="dot"></span></button>
+        <button class="tab" data-t="parent">👩 엄마·아빠 폰<span class="dot"></span></button>
       </div>
       <button class="btn pri" id="dNext">다음 ▶</button>
     </div>
@@ -411,6 +457,7 @@ a{color:inherit}
     <div id="shHead"><b>공신폰으로 이런 걸 할 수 있어요 🗂</b><button class="btn sm" id="shX">닫기</button></div>
     <div id="shList"></div>
   </div></div>
+  <div id="finger">👆</div>
   <div id="alarm"></div>
 </div>
 
@@ -464,6 +511,8 @@ function buildDB(){
     db.usage_history.push({ id:'u' + (i + 1), device_code:CODE, date:day, total_minutes:m, total_seconds:m * 60, updated_at:d.toISOString() });
     for (const p in B.pastApps) db.app_usage_history.push({ device_code:CODE, date:day, app_package:p, app_name:NM[p] || p, minutes:Math.round(m * B.pastApps[p]) });
   });
+  // 부모웹앱의 「매장에서 더 집중해서 케어해 드릴게요」 설문 안내는 체험 손님에게 헷갈린다 → 이미 적은 것으로 둔다
+  db.global_policies.push({ key:'parent_note_' + CODE, value:JSON.stringify({ v:2, ans:{}, memo:'체험용' }) });
   db._tube.videos.push({ video_id:'SnDemoEng01', title:'[중2 영어] 현재완료 10분 정리', channel:'영어 쌤 채널', added_at:new Date(now - 3 * 86400000).toISOString(), added_by:'parent' });
   db._tube.videos.push({ video_id:'SnDemoSci01', title:'[중2 과학] 전기 회로 실험 한눈에', channel:'과학 실험실', added_at:new Date(now - 6 * 86400000).toISOString(), added_by:'parent' });
   return db;
@@ -487,6 +536,7 @@ window.SN_KIT = {
     ls.setItem('sinae_loc_token', JSON.stringify({ [CODE]: 'd'.repeat(64) }));
     ls.setItem('sinae_loc_token_at', JSON.stringify({ [CODE]: Date.now() }));
     ls.setItem('sinae_intro_seen', '99');
+    ls.setItem('note_nudge_' + CODE, String(Date.now()));
     ss.setItem('sinae_auth', '1'); ss.setItem('sinae_auth_by', 'pin'); ss.setItem('sinae_pinh', 'd'.repeat(64));
   },
   rpc(fn, a){
@@ -537,17 +587,6 @@ function loadParent(){
     }
   })();
   return LOADING;
-}
-/* 부모님 화면 안 한 곳을 가운데로 가져오고 파란 테두리로 표시 */
-function parentSpot(sel){
-  try{
-    const d = W && W.document; if (!d) return;
-    if (!d.getElementById('snSpotCss')){ const st = d.createElement('style'); st.id = 'snSpotCss';
-      st.textContent = '.snSpot{outline:3px solid #3D6BF0!important;outline-offset:3px;border-radius:14px;animation:snSpot 1.2s infinite}@keyframes snSpot{50%{outline-color:rgba(61,107,240,.25)}}'; d.head.appendChild(st); }
-    d.querySelectorAll('.snSpot').forEach(e => e.classList.remove('snSpot'));
-    const el = sel && d.querySelector(sel); if (!el) return;
-    el.classList.add('snSpot'); el.scrollIntoView({ block:'center' });
-  }catch(e){}
 }
 async function parentGo(fn){
   try{ await loadParent(); }catch(e){ return; }
@@ -627,7 +666,7 @@ $('child').addEventListener('click', e => {
 let TALK_MINE = [];
 function paintTalk(){
   const hl = SC && SC.id === 'S1' && STEP === 0 ? 'hl' : '';
-  $('tkIn').classList.toggle('hl', !!(SC && SC.id === 'S1' && STEP === 2));
+  $('tkIn').classList.toggle('hl', !!(SC && SC.id === 'S1' && STEP === 1));
   $('tkBody').innerHTML = `
     <div class="mRow"><div class="mAv">🐻</div><div><div class="mNm">지우</div><div class="mB">내일 수행평가 범위 어디까지야?</div></div></div>
     <div class="mMe">3단원 끝까지래!</div>
@@ -740,7 +779,7 @@ function fit(){
   const c = $('child');
   c.style.transform = `scale(${s})`; c.style.height = Math.floor(h / s) + 'px';
   c.style.left = Math.round(7 + (w - 360 * s) / 2) + 'px';
-  // 부모님 화면 : 실제 폰처럼 세로 600 이상으로 그리고, 자리가 모자라면 그만큼 줄인다
+  // 엄마·아빠 폰 화면 : 실제 폰처럼 세로 600 이상으로 그리고, 자리가 모자라면 그만큼 줄인다
   const pw = $('pWrap').clientWidth, ph = $('pWrap').clientHeight, ps = Math.min(1, ph / 600, pw / 340);
   const f = $('pFr'); f.style.transform = ps < 1 ? `scale(${ps})` : ''; f.style.width = Math.ceil(pw / ps) + 'px'; f.style.height = Math.ceil(ph / ps) + 'px';
 }
@@ -749,120 +788,239 @@ let TAB = 'child';
 function tabTo(t, msg){
   TAB = t;
   $('paneC').classList.toggle('off', t !== 'child'); $('paneP').classList.toggle('off', t !== 'parent');
-  document.querySelectorAll('.tab').forEach(b => { b.classList.toggle('on', b.dataset.t === t); if (b.dataset.t === t) b.classList.remove('ping'); });
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b.dataset.t === t));
   if (msg) flash(msg);
+  placeFinger();
 }
-function ping(t){ if (TAB !== t) document.querySelector(`.tab[data-t="${t}"]`).classList.add('ping'); }
-function flash(m){ const f = $('flash'); f.textContent = m; f.classList.add('on'); clearTimeout(flash.t); flash.t = setTimeout(() => f.classList.remove('on'), 1500); }
+function flash(m){ const f = $('flash'); f.innerHTML = m; f.classList.add('on'); clearTimeout(flash.t); flash.t = setTimeout(() => f.classList.remove('on'), 1700); }
 $('tabs').addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) tabTo(b.dataset.t); });
-const TO_P = () => tabTo('parent', '👩 부모님 폰으로 넘어왔어요');
-const TO_C = () => tabTo('child', '👧 아이 폰으로 넘어왔어요');
+const TO_P = () => tabTo('parent', '📲 이번엔<br><b>엄마·아빠 폰</b>이에요');
+const TO_C = () => tabTo('child', '📱 다시<br><b>아이 폰</b>이에요');
 
-/* 부모폰 알림 배너 — 누를 때까지 남는다 */
+/* 엄마·아빠 폰 알림 배너 — 누를 때까지 남는다 */
 function push(title, body, onTap){
   $('pushT').textContent = title; $('pushB').textContent = body;
   $('push').classList.add('on'); $('push').onclick = () => { $('push').classList.remove('on'); onTap && onTap(); };
 }
 
+/* ═══════════════════════ 👆 손가락 — 다음에 누를 곳을 가리킨다 ═══════════════════════
+ * pt = ['child' | 'parent' | 'kit', 선택자(또는 선택자를 돌려주는 함수)]
+ * 그 폰이 안 보이면 그 폰 탭을 가리킨다. 엄마·아빠 폰 안은 iframe 좌표 × 줄인 배율로 옮긴다. */
+let PT = null, PT_SCROLLED = false;
+function parentDoc(){ try{ return W && W.document; }catch(e){ return null; } }
+function spotCss(d){
+  if (d && !d.getElementById('snSpotCss')){ const st = d.createElement('style'); st.id = 'snSpotCss';
+    st.textContent = '.snSpot{outline:3px solid #3D6BF0!important;outline-offset:3px;border-radius:14px;animation:snSpot 1.2s infinite}@keyframes snSpot{50%{outline-color:rgba(61,107,240,.25)}}'; d.head.appendChild(st); }
+}
+function pointAt(p){
+  const d = parentDoc(); if (d) d.querySelectorAll('.snSpot').forEach(e => e.classList.remove('snSpot'));
+  document.querySelectorAll('.kitSpot').forEach(e => e.classList.remove('kitSpot'));
+  PT = p || null; PT_SCROLLED = false; placeFinger();
+}
+function targetRect(){
+  if (!PT) return null;
+  const where = PT[0], sel = typeof PT[1] === 'function' ? PT[1]() : PT[1];
+  if (where === 'kit'){ const el = document.querySelector(sel); if (!el || !el.offsetParent) return null; el.classList.add('kitSpot'); return el.getBoundingClientRect(); }
+  if (where !== TAB) return document.querySelector(`.tab[data-t="${where}"]`).getBoundingClientRect();
+  if (where === 'child'){ const el = $('child').querySelector(sel); return el && el.offsetParent ? el.getBoundingClientRect() : null; }
+  const d = parentDoc(); if (!d) return null;
+  const el = d.querySelector(sel); if (!el || !el.getClientRects().length) return null;
+  spotCss(d); el.classList.add('snSpot');
+  if (!PT_SCROLLED){ PT_SCROLLED = true; el.scrollIntoView({ block:'center' }); }
+  const fr = $('pFr').getBoundingClientRect(), r = el.getBoundingClientRect(), k = fr.width / W.innerWidth;
+  return { left: fr.left + r.left * k, top: fr.top + r.top * k, width: r.width * k, height: r.height * k };
+}
+function placeFinger(){
+  const f = $('finger');
+  const r = $('sDemo').classList.contains('on') && !$('ovl').classList.contains('on') ? targetRect() : null;
+  if (!r){ f.classList.remove('on'); return; }
+  const a = $('app').getBoundingClientRect(), st = $('stage').getBoundingClientRect();
+  const cx = r.left + r.width / 2, cy = r.top + Math.min(r.height * .6, 40);
+  if (PT[0] === TAB && (cy < st.top || cy > st.bottom)){ f.classList.remove('on'); return; }   // 화면 밖으로 밀려나 있으면 숨긴다
+  f.style.left = Math.round(cx - a.left) + 'px'; f.style.top = Math.round(cy - a.top) + 'px'; f.classList.add('on');
+}
+setInterval(placeFinger, 200);
+
 /* ═══════════════════════ 장면 ═══════════════════════
- * 🔴 문구는 실제 동작과 대조한 매장 태블릿판(설계서) 그대로다. 새 기능 약속을 더하지 않는다.
+ * 🔴 문구는 실제 동작과 대조한 매장 태블릿판(설계서) 그대로의 사실만 쓴다. 새 기능 약속을 더하지 않는다.
+ *    말은 나이 드신 부모님 기준으로 쉽게 (취침 → 잠자는 시간 · 부모님 폰 → 엄마·아빠 폰).
+ * 장면 = 먼저 설명(걱정 → 공신폰은) → 👆 따라 하기(모르면 「보여 주세요」) → 이렇게 됐어요
  */
 const TODAY_LABEL = () => DAYS[new Date().getDay()] + '요일';
 function dtSpanText(){ const v = String(pol('dt_day_' + (new Date().getDay() + 1)) || ''); const [a, b] = v.split('|'); return a && b ? `${kTime(a)} ~ ${kTime(b)}` : '꺼져 있어요'; }
 function kTime(x){ const m = hm(x); if (m == null) return x; const h = Math.floor(m / 60), mm = m % 60; return (h < 12 ? '오전 ' : '오후 ') + ((h % 12) || 12) + '시' + (mm ? ' ' + mm + '분' : ''); }
+const txt = x => typeof x === 'function' ? x() : x;
+const clickP = sel => { const d = parentDoc(), el = d && d.querySelector(sel); if (el) el.click(); return !!el; };
+const DAY_ITEM = () => `[onclick="limSheet(${simNow().getDay() + 1})"]`;
+const SAVE_BTN = '[onclick^="limSheetSave"]';
+const OK_BTN = () => `[onclick="tubeDecide('${QV.video_id}',true)"]`;
+function set30(){ try{ W.eval("document.querySelector('#whH .wscroll').scrollTop = 0; document.querySelector('#whM .wscroll').scrollTop = 30 * WH_ITEM"); }catch(e){} }
+function toBed(){
+  const st = hm(String(pol('dt_day_' + (new Date().getDay() + 1)) || '22:00').split('|')[0]) ?? 1320;
+  const n = new Date(), t = new Date(n); t.setHours(Math.floor(st / 60), st % 60 + 5, 0, 0); SIM_OFFSET = t - n;
+  tick(); TO_C(); reevaluate(600);
+}
 const SCENES = {
-  S1: { emoji:'💬', title:'카톡은 그대로, 카톡 속 링크는 막혀요', short:'카톡 링크', tab:'child',
-    steps:['👧 단톡방에 온 유튜브 링크를 눌러 보세요', '링크가 열리자마자 닫혀요 — 「인터넷 연결은 제한되어 있어요」', '대화는 그대로 돼요 — 아래 「메시지 입력」을 눌러 보세요'],
-    tip:'<b>필요한 앱은 쓰고, 그 앱 속 인터넷만 막아요.</b> 👩 부모님 폰 탭에서 카톡 차단을 하나씩 켜고 끌 수도 있어요.',
+  S1: { emoji:'💬', title:'카톡은 되고, 카톡 속 링크는 막혀요', short:'카톡 링크', tab:'child',
+    worry:'카톡을 열어 주면, 친구가 보낸 <b>링크</b>로 유튜브·인터넷에 들어가요.',
+    how:'공신폰은 카톡 대화는 그대로 두고, <b>링크로 인터넷에 나가는 길만</b> 막아요.',
+    steps:[ { t:'친구가 보낸 <b>유튜브 링크</b>를 눌러 보세요', pt:['child','#tkLink'], auto:() => openLink() },
+            { t:'이번엔 대화를 해 볼까요? 아래 <b>「메시지 입력」</b>을 눌러요', pt:['child','#tkIn'], auto:() => $('tkIn').click() } ],
+    result:['링크를 눌러도 유튜브·인터넷은 <b>바로 닫혀요</b>', '친구들과 카톡 대화는 <b>그대로</b> 할 수 있어요'],
+    tip:'토스·하이클래스·네이버사전 같은 다른 앱 속 인터넷도 똑같이 막아요.',
     async setup(){ TALK_MINE = []; view('talk'); parentGo('openKakao'); },
-    on(ev){ if (ev === 'child:linkBlocked' && STEP < 2){ step(2); paintTalk(); }
-            if (ev === 'child:chat' && STEP >= 2) done('카톡 대화는 그대로 되고, 링크로 나가는 길만 막혀요.');
-            if (ev === 'child:linkOpened') done('부모님이 차단을 끄면 열리고, 다시 켜면 바로 막혀요.'); } },
-  S4: { emoji:'⏰', title:'부모님이 정하면 아이 폰에 바로 걸려요', short:'하루 사용시간', tab:'parent',
-    steps:[() => `👩 오늘(${TODAY_LABEL()}) 칸을 눌러요`, '「0시간 30분」으로 돌리고 「완료」를 눌러요', '👧 아이 폰이 바로 잠겨요 (오늘 벌써 47분 썼거든요)'],
-    tip:'<b>요일마다 다르게</b> 정할 수 있어요. 집에서도 부모님 폰으로 바로 바뀌어요 — 아이 폰을 뺏을 필요가 없어요.',
-    async setup(){ view('home'); await parentGo('openLimit'); setTimeout(() => parentSpot(`[onclick="limSheet(${simNow().getDay() + 1})"]`), 350); watchSheet(); },
+    on(ev){ if (ev === 'child:linkBlocked' && STEP === 0){ step(1); note('🚫 링크가 바로 닫혔죠? 「인터넷 연결은 제한되어 있어요」'); paintTalk(); }
+            if (ev === 'child:chat' && STEP >= 1) done();
+            if (ev === 'child:linkOpened') done(); } },
+  S4: { emoji:'⏰', title:'하루에 쓸 시간을 정해요', short:'하루 쓸 시간', tab:'parent',
+    worry:'아이가 <b>하루 종일</b> 폰만 봐요.',
+    how:'엄마·아빠 폰에서 <b>하루에 쓸 시간</b>을 정하면, 시간이 다 됐을 때 아이 폰이 <b>저절로 잠겨요</b>.',
+    steps:[ { t:() => `엄마·아빠 폰에서 <b>오늘(${TODAY_LABEL()})</b> 줄을 눌러요`, pt:['parent', DAY_ITEM], auto:() => clickP(DAY_ITEM()) },
+            { t:'노란 <b>「30분으로 맞추기」</b>를 누르고, <b>「완료」</b>를 눌러요', btn:['⏱ 30분으로 맞추기', set30], pt:['parent', SAVE_BTN],
+              auto:() => { set30(); setTimeout(() => clickP(SAVE_BTN), 350); } } ],
+    result:['정하자마자 아이 폰이 <b>잠겼어요</b><br><small>(오늘 벌써 47분 썼거든요)</small>', '잠겨도 <b>긴급전화</b>는 걸 수 있어요', '요일마다 <b>다르게</b> 정할 수 있어요'],
+    tip:'집 밖에서도 엄마·아빠 폰으로 바로 바꿀 수 있어요. 아이 폰을 뺏을 필요가 없어요.',
+    async setup(){ view('home'); await parentGo('openLimit'); watchSheet(); },
     on(ev, x){
       if (ev === 'sheetOpen' && STEP === 0) step(1);
       if (ev === 'policy'){ const k = 'limit_day_' + (simNow().getDay() + 1);
         if ((x || []).some(r => r && r.key === k)){ const v = Number(pol(k));
-          if (v >= 0 && v <= usedMin()) step(2); else note(`오늘 한도가 ${v < 0 ? '무제한' : v + '분'}이 됐어요. 47분보다 적게 고르면 바로 잠기는 걸 볼 수 있어요.`); } }
-      if (ev === 'child:locked:limit'){ setTimeout(TO_C, 400); done('저장한 순간 아이 폰이 잠겼어요. 긴급전화는 그대로 돼요.'); } } },
-  S7: { emoji:'🙋', title:'더 쓰고 싶을 땐 부모님이 정해요', short:'시간 더 주세요', tab:'child',
-    steps:['👧 잠긴 폰에서 「🙋 더 쓰고 싶다고 알리기」를 눌러요', '👩 부모님 폰에 온 알림을 눌러요', '15분·30분·1시간 중 골라요 → 👧 바로 풀려요'],
-    tip:'<b>얼마 줄지는 부모님이 정해요.</b> 「오늘은 그만」을 누르면 그대로 잠겨 있어요. 요청은 2시간 지나면 저절로 사라져요.',
+          if (!(v >= 0 && v <= usedMin())){ goStep(0); note(`오늘 시간이 ${v < 0 ? '무제한' : v + '분'}이 됐어요. 47분보다 적게 정해야 바로 잠기는 걸 볼 수 있어요.`); } } }
+      if (ev === 'child:locked:limit'){ setTimeout(TO_C, 300); done(); } } },
+  S7: { emoji:'🙋', title:'「조금만 더」는 엄마·아빠가 정해요', short:'조금만 더', tab:'child',
+    worry:'시간이 다 되면 아이가 <b>「조금만 더!」</b> 하며 전화로 졸라요.',
+    how:'아이가 버튼으로 부탁하면, 엄마·아빠가 폰으로 <b>「30분 더」</b>처럼 골라 줄 수 있어요.',
+    steps:[ { t:'시간이 다 돼서 아이 폰이 잠겼어요. <b>「더 쓰고 싶다고 알리기」</b>를 눌러요', pt:['child','[data-k="req"]'],
+              auto:() => { const b = $('csLock').querySelector('[data-k="req"]'); b && b.click(); } },
+            { t:'엄마·아빠 폰에 <b>알림</b>이 왔어요. 알림을 눌러요', pt:['kit','#push.on'], auto:() => $('push').click() },
+            { t:'얼마나 더 줄지 골라요. <b>「30분」</b>을 눌러 보세요', pt:['parent','[onclick="grantTimeRequest(30)"]'], auto:() => clickP('[onclick="grantTimeRequest(30)"]') } ],
+    result:['엄마·아빠가 고른 만큼 <b>바로 풀렸어요</b>', '「오늘은 그만」을 누르면 <b>그대로 잠겨</b> 있어요', '얼마나 줄지는 언제나 <b>엄마·아빠가</b> 정해요'],
+    tip:'아이 부탁은 2시간이 지나면 저절로 사라져요.',
     async setup(){ setPol('limit_day_' + (simNow().getDay() + 1), '40'); setPol('daily_limit_enabled', 'true'); setPol('time_request', ''); setPol('bonus_today', '');
       LOCK = lockState(); view('home'); parentGo(null); },
     on(ev){
-      if (ev === 'child:timeRequest'){ step(1); setTimeout(() => { TO_P(); push('🙋 시간을 더 쓰고 싶어해요', '오늘 쓸 수 있는 시간을 다 썼어요. 눌러서 시간을 줄 수 있어요', async () => { await parentGo(null); step(2); setTimeout(() => parentSpot('#timeReqBox .card'), 250); }); }, 1100); }
-      if (ev === 'parent:bonus') setTimeout(() => { if (!LOCK){ TO_C(); done(`부모님이 고른 만큼 바로 풀렸어요 (오늘 +${bonusToday()}분).`); } }, 900);
-      if (ev === 'parent:timeCleared' && !bonusToday()) note('「오늘은 그만」 — 요청은 사라지고 폰은 그대로 잠겨 있어요.'); } },
-  S8: { emoji:'📚', title:'교재 QR 영상은 허락받고 봐요', short:'교재 QR 영상', tab:'child',
-    steps:['👧 교재 QR 코드를 찍어요 (아래 동그란 버튼)', '유튜브는 막혀요 — 「🙋 부모님께 이 영상 요청하기」', '👩 「자녀의 허락 요청」에서 [허락] → 👧 시내YouTube 에 나타나요'],
-    tip:'<b>시내YouTube 는 부모님이 허락한 영상만</b> 나오는 유튜브예요. 추천 영상·쇼츠로 빠질 길이 없어요.',
+      if (ev === 'child:timeRequest') setTimeout(() => { TO_P();
+        push('🙋 시간을 더 쓰고 싶어해요', '오늘 쓸 수 있는 시간을 다 썼어요. 눌러서 시간을 줄 수 있어요', async () => { await parentGo(null); step(2); });
+        step(1); }, 1100);
+      if (ev === 'parent:bonus') setTimeout(() => { if (!LOCK){ TO_C(); done(); } }, 900);
+      if (ev === 'parent:timeCleared' && !bonusToday()) note('「오늘은 그만」 — 부탁은 사라지고 아이 폰은 그대로 잠겨 있어요.'); } },
+  S8: { emoji:'📚', title:'공부 영상은 허락한 것만 봐요', short:'공부 영상', tab:'child',
+    worry:'공부 영상 때문에 유튜브를 열어 주면, <b>쇼츠·다른 영상</b>으로 빠져요.',
+    how:'아이가 볼 영상을 부탁하면, 엄마·아빠가 <b>허락한 영상만</b> 「시내YouTube」에서 볼 수 있어요.',
+    steps:[ { t:'교재의 <b>QR 코드</b>를 찍어요. 아래 <b>하얀 동그라미</b>를 눌러요', pt:['child','#camShot'], auto:() => $('camShot').click() },
+            { t:'유튜브는 막혔어요. <b>「부모님께 이 영상 요청하기」</b>를 눌러요', pt:['child','#tbAsk'], auto:() => { const b = $('tbAsk'); b && b.click(); } },
+            { t:'엄마·아빠 폰에서 이 영상 옆 <b>「허락」</b>을 눌러요', pt:['parent', OK_BTN], auto:() => clickP(OK_BTN()) } ],
+    result:['허락한 영상이 아이 폰 <b>시내YouTube</b>에 바로 나타났어요', '시내YouTube 에는 <b>추천 영상·쇼츠가 없어요</b>', '허락 안 한 영상은 <b>볼 수 없어요</b>'],
+    tip:'시내YouTube 는 엄마·아빠가 허락한 영상만 나오는 유튜브예요.',
     async setup(){ TB_SENT = false; DB._tube.reqs = []; DB._tube.videos = DB._tube.videos.filter(v => v.video_id !== QV.video_id); view('cam'); parentGo(null); },
     on(ev){
       if (ev === 'child:tubeBlocked') step(1);
-      if (ev === 'child:tubeRequested'){ step(2); setTimeout(async () => { await parentGo('openTube'); TO_P(); setTimeout(() => parentSpot(`[onclick="tubeDecide('${QV.video_id}',true)"]`), 300); }, 900); }
-      if (ev === 'tube:approve'){ done('허락한 영상이 아이 폰 시내YouTube 에 바로 나타났어요.'); setTimeout(() => { view('tube'); TO_C(); }, 1000); }
+      if (ev === 'child:tubeRequested') setTimeout(async () => { await parentGo('openTube'); TO_P(); step(2); }, 900);
+      if (ev === 'tube:approve'){ done(); setTimeout(() => { view('tube'); TO_C(); }, 900); }
       if (ev === 'tube:reject') note('거절하면 아이 폰엔 안 나타나요.'); } },
-  S5: { emoji:'🌙', title:'밤에는 아이 폰이 저절로 쉬어요', short:'취침시간', tab:'parent',
-    steps:[() => `👩 오늘(${TODAY_LABEL()}) 취침시간은 ${dtSpanText()} 이에요`, '아래 「🌙 취침 시각으로 돌려 보기」를 눌러요', '👧 취침 화면이 떠요 — 긴급전화·알람은 그대로'],
-    tip:'<b>요일마다 시간을 다르게</b> 정할 수 있어요. 학원 시간처럼 낮에 잠깐 쉬게 하는 것도 돼요.',
-    extra:[['🌙 취침 시각으로 돌려 보기', () => { const st = hm(String(pol('dt_day_' + (new Date().getDay() + 1)) || '22:00').split('|')[0]) ?? 1320; const n = new Date(); const t = new Date(n); t.setHours(Math.floor(st / 60), st % 60 + 5, 0, 0); SIM_OFFSET = t - n; tick(); TO_C(); reevaluate(500); }]],
-    async setup(){ SIM_OFFSET = 0; view('home'); await parentGo('openDt'); step(1); },
-    on(ev){ if (ev === 'child:locked:dt') done(`취침 시각이 되자 취침 화면으로 바뀌었어요. ${dtSpanText().split(' ~ ')[1] || '아침'}에 저절로 풀려요.`); } }
+  S5: { emoji:'🌙', title:'밤에는 폰이 저절로 쉬어요', short:'잠자는 시간', tab:'parent',
+    worry:'밤늦게까지 <b>몰래</b> 폰을 해요.',
+    how:() => `정해 둔 <b>잠자는 시간</b>(오늘은 ${dtSpanText()})이 되면 아이 폰이 <b>저절로 잠겨요</b>.`,
+    steps:[ { t:'엄마·아빠 폰에 잠자는 시간이 보여요. 아래 <b>노란 버튼</b>을 눌러 시계를 그 시간으로 돌려 봐요', btn:['🌙 잠자는 시간으로 시계 돌리기', toBed], pt:['kit','#cdExtra button'], auto: toBed } ],
+    result:['잠자는 시간이 되자 아이 폰이 <b>저절로 잠겼어요</b>', '<b>긴급전화·알람</b>은 그대로 돼요', () => `${dtSpanText().split(' ~ ')[1] || '아침'}이 되면 <b>저절로 풀려요</b>`],
+    tip:'요일마다 시간을 다르게 정할 수 있어요. 학원 시간처럼 낮에 잠깐 쉬게 하는 것도 돼요.',
+    async setup(){ SIM_OFFSET = 0; view('home'); await parentGo('openDt'); },
+    on(ev){ if (ev === 'child:locked:dt') done(); } }
 };
 const ALL = ['S1','S4','S7','S8','S5'];
 
 /* 코스 · 단계 */
-let COURSE = ALL.slice(), CI = 0, SC = null, STEP = 0, SEEN = new Set(), FREE = null, MORE = false;
+let COURSE = ALL.slice(), CI = 0, SC = null, STEP = 0, SEEN = new Set(), FREE = null, DONE = false, FIRST = true, RES_T;
 function paintChips(){
   $('dChips').innerHTML = COURSE.map((id, i) => `<button class="cc ${i === CI && !FREE ? 'on' : ''} ${SEEN.has(id) ? 'done' : ''}" data-i="${i}">${SEEN.has(id) ? '✓ ' : ''}${SCENES[id].emoji} ${SCENES[id].short}</button>`).join('');
   const on = $('dChips').querySelector('.cc.on'); if (on) on.scrollIntoView({ inline:'center', block:'nearest' });
 }
 $('dChips').addEventListener('click', e => { const b = e.target.closest('.cc'); if (b) startScene(+b.dataset.i); });
-let DONE_MSG = '';
+const curStep = () => SC.steps[Math.min(STEP, SC.steps.length - 1)];
 function paintCard(){
-  const s = SC, n = s.steps.length;
+  const s = SC, n = s.steps.length, c = curStep();
   $('cdEmoji').textContent = s.emoji; $('cdTitle').textContent = s.title;
-  $('cdDots').innerHTML = FREE ? '' : s.steps.map((_, i) => `<i class="${DONE_MSG || i < STEP ? 'done' : i === STEP ? 'on' : ''}"></i>`).join('');
-  const cur = s.steps[Math.min(STEP, n - 1)];
-  $('cdStep').className = DONE_MSG ? 'ok' : '';
-  $('cdStep').innerHTML = DONE_MSG ? '✅ ' + DONE_MSG : (FREE ? '' : `${STEP + 1}. `) + (typeof cur === 'function' ? cur() : cur);
-  $('cdExtra').innerHTML = (s.extra || []).map((x, i) => `<button class="btn sm ${i ? '' : 'warm'}" data-x="${i}">${x[0]}</button>`).join('');
-  $('cdSteps').innerHTML = s.steps.map((t, i) => `<div class="gs ${DONE_MSG || i < STEP ? 'done' : i === STEP ? 'on' : ''}"><span class="n">${DONE_MSG || i < STEP ? '✓' : i + 1}</span><span>${typeof t === 'function' ? t() : t}</span></div>`).join('');
-  $('cdTip').innerHTML = '💡 ' + s.tip;
-  $('cdMore').classList.toggle('on', MORE); $('cdMoreBtn').textContent = MORE ? '접기 ▴' : '도움말 ▾';
-  $('dNext').classList.toggle('go', !!DONE_MSG);
+  $('cdDots').innerHTML = (FREE || n < 2) ? '' : s.steps.map((_, i) => `<i class="${DONE || i < STEP ? 'done' : i === STEP ? 'on' : ''}"></i>`).join('');
+  if (DONE){
+    $('cdStep').className = 'ok'; $('cdStep').innerHTML = '✅ 잘 하셨어요!';
+    $('cdHelp').style.display = 'none'; $('cdExtra').innerHTML = `<button class="btn sm pri" id="cdRes">✅ 무엇이 달라졌는지 보기</button>`;
+    pointAt(null);
+  } else {
+    $('cdStep').className = ''; $('cdStep').innerHTML = (FREE ? '' : `<span class="n">${STEP + 1}</span>`) + txt(c.t);
+    $('cdHelp').style.display = c.auto ? '' : 'none';
+    $('cdExtra').innerHTML = c.btn ? `<button class="btn sm warm" data-b="1">${c.btn[0]}</button>` : '';
+    pointAt(c.pt);
+  }
+  $('dNext').classList.toggle('go', DONE);
   $('dNext').textContent = (FREE || CI >= COURSE.length - 1) ? '마무리 ▶' : '다음 ▶';
+  fit();
 }
-$('cdMoreBtn').addEventListener('click', () => { MORE = !MORE; paintCard(); fit(); });
-$('cdExtra').addEventListener('click', e => { const b = e.target.closest('[data-x]'); if (b && SC.extra) SC.extra[+b.dataset.x][1](); });
-function step(n){ if (n > STEP && !DONE_MSG){ STEP = n; $('cdNote').classList.remove('on'); paintCard(); if (VIEW === 'home') paintHome(); if (LOCK) paintLock(); if (VIEW === 'tubeblock') paintTubeBlock(); } }
-function note(m){ const d = $('cdNote'); d.textContent = '👉 ' + m; d.classList.add('on'); fit(); }
-function done(m){ STEP = SC.steps.length; DONE_MSG = m; SEEN.add(SC.id); $('cdNote').classList.remove('on'); paintCard(); paintChips(); fit(); }
+$('cdExtra').addEventListener('click', e => {
+  if (e.target.closest('#cdRes')){ showResult(); return; }
+  if (e.target.closest('[data-b]')){ const c = curStep(); if (c.btn) c.btn[1](); }
+});
+/* 🤝 보여 주세요 — 지금 단계를 대신 해 준다 (그 폰이 안 보이면 먼저 그 폰으로 넘어간다) */
+$('cdHelp').addEventListener('click', () => {
+  const c = SC && !DONE && curStep(); if (!c || !c.auto) return;
+  const w = c.pt && c.pt[0];
+  if ((w === 'child' || w === 'parent') && TAB !== w){ if (w === 'child') TO_C(); else TO_P(); setTimeout(c.auto, 700); }
+  else c.auto();
+});
+function step(n){ if (n > STEP && !DONE){ STEP = n; $('cdNote').classList.remove('on'); paintCard(); if (VIEW === 'home') paintHome(); if (LOCK) paintLock(); if (VIEW === 'tubeblock') paintTubeBlock(); } }
+function goStep(n){ STEP = n; paintCard(); }
+function note(m){ const d = $('cdNote'); d.textContent = m; d.classList.add('on'); fit(); }
+function done(){
+  if (DONE) return; DONE = true; SEEN.add(SC.id); $('cdNote').classList.remove('on'); paintCard(); paintChips();
+  const id = SC.id; clearTimeout(RES_T); RES_T = setTimeout(() => { if (SC && SC.id === id && DONE) showResult(); }, 2200);   // 바뀐 화면을 잠깐 보여 준 뒤 정리
+}
 function event_(ev, x){ if (SC && SC.on) try{ SC.on(ev, x); }catch(e){ console.warn(e); } }
 let SHEET_T;
 function watchSheet(){ clearInterval(SHEET_T); SHEET_T = setInterval(() => {
   try{ const sh = W && W.document.getElementById('sheet'); if (sh && !sh.classList.contains('hide')) event_('sheetOpen'); }catch(e){}
   if (!SC || SC.id !== 'S4') clearInterval(SHEET_T); }, 400); }
+
+/* 설명 창 (장면 시작 전 · 끝난 뒤) */
+function ov(on){ $('ovl').classList.toggle('on', on); if (on) $('ovl').scrollTop = 0; placeFinger(); }
+function showIntro(){
+  const s = SC;
+  $('ovBox').innerHTML = `<div class="ovE">${s.emoji}</div><div class="ovT">${s.title}</div>
+    <div class="ovQ"><span>😟</span><div><small>이런 걱정, 있으시죠?</small>${txt(s.worry)}</div></div>
+    <div class="ovA"><span>😊</span><div><small>공신폰은 이렇게 해요</small>${txt(s.how)}</div></div>
+    ${FIRST ? `<div class="ovHow"><b>👆 손가락</b>이 가리키는 곳을 눌러 주세요.<br>잘 모르겠으면 <b>「🤝 보여 주세요」</b>를 누르세요. 대신 해 드려요.</div>` : ''}
+    <button class="btn pri big" id="ovGo">👆 직접 해 볼게요</button>`;
+  ov(true);
+}
+function showResult(){
+  const s = SC, last = CI >= COURSE.length - 1;
+  $('ovBox').innerHTML = `<div class="ovE">✅</div><div class="ovT">이렇게 됐어요</div>
+    <ul class="ovL">${s.result.map(l => `<li>${txt(l)}</li>`).join('')}</ul>
+    <div class="ovTip">💡 ${s.tip}</div>
+    <button class="btn pri big" id="ovNext">${last ? '다 봤어요 · 마무리 ▶' : '다음 기능 보기 ▶'}</button>
+    <div class="row2"><button class="btn" id="ovAgain">↺ 다시 해 보기</button><button class="btn" id="ovClose">화면 다시 보기</button></div>`;
+  ov(true);
+}
+$('ovBox').addEventListener('click', e => {
+  if (e.target.closest('#ovGo')){ FIRST = false; ov(false); paintCard(); }
+  else if (e.target.closest('#ovNext')){ ov(false); if (CI >= COURSE.length - 1) openWrap(); else startScene(CI + 1); }
+  else if (e.target.closest('#ovAgain')){ ov(false); startScene(CI); }
+  else if (e.target.closest('#ovClose')){ ov(false); }
+});
+
 async function startScene(i){
-  FREE = null; CI = Math.max(0, Math.min(COURSE.length - 1, i)); SC = Object.assign({ id:COURSE[CI] }, SCENES[COURSE[CI]]); STEP = 0; DONE_MSG = ''; MORE = false;
+  FREE = null; CI = Math.max(0, Math.min(COURSE.length - 1, i)); SC = Object.assign({ id:COURSE[CI] }, SCENES[COURSE[CI]]); STEP = 0; DONE = false; clearTimeout(RES_T);
   $('cdNote').classList.remove('on'); $('push').classList.remove('on'); $('iab').classList.remove('on');
   DB = buildDB(); SIM_OFFSET = 0; LOCK = lockState();
-  show('sDemo'); paintChips(); paintCard(); tabTo(SC.tab); fit();
+  show('sDemo'); paintChips(); tabTo(SC.tab); paintCard(); showIntro();
   await SC.setup(); LOCK = lockState(); view(VIEW); paintCard();
 }
 async function freeLook(f){
-  FREE = f; SC = { id:'FREE', emoji:f.e, title:f.t, steps:['👩 부모님 화면을 직접 눌러 보세요'], tip:f.d }; STEP = 0; DONE_MSG = ''; MORE = false;
+  FREE = f; SC = { id:'FREE', emoji:f.e, title:f.t, steps:[{ t:'엄마·아빠 폰 화면을 <b>위아래로 밀어서</b> 둘러보세요' }] }; STEP = 0; DONE = false; clearTimeout(RES_T);
   DB = buildDB(); SIM_OFFSET = 0; LOCK = lockState();
-  $('cdNote').classList.remove('on'); $('push').classList.remove('on');
-  show('sDemo'); paintChips(); paintCard(); tabTo('parent'); view('home'); fit();
+  $('cdNote').classList.remove('on'); $('push').classList.remove('on'); ov(false);
+  show('sDemo'); paintChips(); tabTo('parent'); view('home'); paintCard();
   await parentGo(f.open);
 }
-$('dNext').addEventListener('click', () => { if (FREE || CI >= COURSE.length - 1) openWrap(); else startScene(CI + 1); });
-$('dPrev').addEventListener('click', () => { if (FREE) startScene(CI); else if (CI > 0) startScene(CI - 1); else show('sWorry'); });
+$('dNext').addEventListener('click', () => { ov(false); if (FREE || CI >= COURSE.length - 1) openWrap(); else startScene(CI + 1); });
 $('dMap').addEventListener('click', openMap);
 
 /* ═══════════════════════ 1. 첫 화면 ═══════════════════════ */
@@ -910,7 +1068,7 @@ const FB = [
 function openMap(){
   const it = (f, g, i) => `<button class="fi ${f.s && SEEN.has(f.s) ? 'seen' : ''}" data-k="${g}:${i}"><span class="e">${f.e}</span><span><div class="t">${f.t}</div><div class="d">${f.d}</div></span><span class="g">${f.s ? (SEEN.has(f.s) ? '✓ 봤어요' : '▶ 체험') : '👀 화면 보기'}</span></button>`;
   $('shList').innerHTML = '<div class="shLab">👧 아이 폰에서</div>' + FA.map((f, i) => it(f, 'A', i)).join('')
-    + '<div class="shLab">👩 부모님 폰으로</div>' + FB.map((f, i) => it(f, 'B', i)).join('')
+    + '<div class="shLab">👩 엄마·아빠 폰으로</div>' + FB.map((f, i) => it(f, 'B', i)).join('')
     + '<button class="btn" id="shHome" style="margin-top:8px">🏠 처음 화면으로</button>';
   $('sheet').classList.add('on');
 }
